@@ -1,4 +1,4 @@
-# It's a dumpster fire. Needs refactoring in the future — but hey, as long as it works...
+# It's a dumpster fire. Needs refactoring in the future — but hey, as long as it works... Lots of scope workarounds, good for a begginer. 
 # https://www.codewars.com/kata/585894545a8a07255e0002f1
 
 def count_patterns_from(firstPoint, length):
