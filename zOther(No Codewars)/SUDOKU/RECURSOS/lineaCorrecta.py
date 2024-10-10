@@ -8,6 +8,9 @@ def compLineas(matrix):
     return True
             
 if __name__ == '__main__':
-    print (compLineas([[1, 2, 3],
-            [2, 3, 1],
-            [3, 1, 2]]))
+    import casosTestSudoku as casosTest
+
+    for caso in sorted(casosTest.__dict__):
+        if not caso.startswith('__'):
+
+            print (casosTest.__dict__[caso] + [", ¿Son las líneas del sudoku correctas? = "] + [compLineas(casosTest.__dict__[caso])])
