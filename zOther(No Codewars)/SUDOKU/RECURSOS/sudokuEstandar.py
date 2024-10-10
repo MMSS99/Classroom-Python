@@ -16,7 +16,7 @@ def compEstandar(matrix):
 if __name__ == '__main__':
     import casosTestSudoku as casosTest
 
-    for caso in sorted(casosTest.__dict__):
+    for caso in casosTest.__dict__:
         if not caso.startswith('__'):
 
             print (casosTest.__dict__[caso] + [", ¿Tiene el sudoku una forma estandarizada n*n? = "] + [compEstandar(casosTest.__dict__[caso])])

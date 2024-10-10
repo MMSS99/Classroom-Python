@@ -1,6 +1,8 @@
 # Observamos el número en los índices de todas las listas y comprobamos que no aparezcan más de una vez.
-
-from .sudokuEstandar import compEstandar
+if __name__ == '__main__':
+    from sudokuEstandar import compEstandar
+else:
+    from .sudokuEstandar import compEstandar
 
 def compColumnas(matrix):
     if compEstandar(matrix) == False:
@@ -20,7 +22,7 @@ def compColumnas(matrix):
 if __name__ == '__main__':
     import casosTestSudoku as casosTest
 
-    for caso in sorted(casosTest.__dict__):
+    for caso in casosTest.__dict__:
         if not caso.startswith('__'):
 
             print (casosTest.__dict__[caso] + [", ¿Son las columnas del sudoku correctas? = "] + [compColumnas(casosTest.__dict__[caso])])
