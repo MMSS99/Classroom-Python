@@ -1,6 +1,10 @@
 # 
+from .sudokuEstandar import compEstandar
 
 def compNumeros(matrix):
+    if compEstandar(matrix) == False:
+        return False
+
     for i in matrix:
         for j in i:
             if j > len(matrix):

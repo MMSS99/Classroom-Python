@@ -7,11 +7,10 @@ sys.path.append('.')
 
 from RECURSOS.columnaCorrecta import compColumnas
 from RECURSOS.lineaCorrecta import compLineas
-from RECURSOS.sudokuEstandar import compEstandar
 from RECURSOS.numerosRango import compNumeros
 
 def compSudoku(matrix):
-    if compColumnas(matrix) == True and compLineas(matrix) == True and compEstandar(matrix) == True and compNumeros(matrix) == True:
+    if compColumnas(matrix) == True and compLineas(matrix) == True and compNumeros(matrix) == True:
         return True
     else:
         return False
@@ -22,5 +21,5 @@ if __name__ == '__main__':
     for caso in sorted(casosTest.__dict__):
         if not caso.startswith('__'):
 
-            print (casosTest.__dict__[caso] + [", ¿Es un sudoku correto? = "] + [compSudoku(casosTest.__dict__[caso])])
+            print (casosTest.__dict__[caso] + [", ¿Es un sudoku correcto? = "] + [compSudoku(casosTest.__dict__[caso])])
 

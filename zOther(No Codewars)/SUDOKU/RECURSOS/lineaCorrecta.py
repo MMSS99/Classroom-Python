@@ -1,6 +1,11 @@
 # Pasamos por todos los elementos de la lista y contamos que aparezcan una sola vez.
 
+from .sudokuEstandar import compEstandar
+
 def compLineas(matrix):
+    if compEstandar(matrix) == False:
+        return False
+    
     for i in matrix:
         for j in i:
             if i.count(j) != 1:
