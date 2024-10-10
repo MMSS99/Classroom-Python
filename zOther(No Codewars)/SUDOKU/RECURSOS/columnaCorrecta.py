@@ -1,6 +1,11 @@
 # Observamos el número en los índices de todas las listas y comprobamos que no aparezcan más de una vez.
 
+from .sudokuEstandar import compEstandar
+
 def compColumnas(matrix):
+    if compEstandar(matrix) == False:
+        return False
+
     for i in range(len(matrix)):
         comprobante = []
         for lista in matrix:

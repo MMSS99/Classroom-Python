@@ -1,5 +1,10 @@
 #https://github.com/dfleta/sudokuModules/blob/main
 
+# Requires a PYTHONPATH and __init__ (709 librorata) on /RECURSOS/ to initialize????
+
+import sys
+sys.path.append('.')
+
 from RECURSOS.columnaCorrecta import compColumnas
 from RECURSOS.lineaCorrecta import compLineas
 from RECURSOS.sudokuEstandar import compEstandar
