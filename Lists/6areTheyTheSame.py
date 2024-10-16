@@ -1,6 +1,5 @@
 #https://www.codewars.com/kata/550498447451fbbd7600041c
 
-import math
 def comp(array1, array2):
 
     if array1 == [] and array2 == []:
