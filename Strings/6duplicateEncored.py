@@ -25,3 +25,17 @@ def duplicate_encode(word):
         else:
             encoded += '('
     return encoded
+
+#w/ dictionaries
+def duplicate_encode(word):
+    codigo = {}
+    
+    for caracter in word.lower():
+        if caracter in codigo:
+            codigo[caracter] = ')'
+        else:
+            codigo[caracter] = '('
+            
+    
+            
+    return ''.join(codigo[x] for x in word.lower())
