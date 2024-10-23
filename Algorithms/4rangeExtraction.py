@@ -1,6 +1,16 @@
 #https://www.codewars.com/kata/51ba717bb08c1cd60f00002f/
 
 def solution(args):
+    buscadorRango = []
+    for numeroIndex in range(len(args)):
+        if 
+
+
+
+
+
+
+'''  
     rangoparcial = ''
     rangofinal = ''
     for numeroIndex in range(len(args)):
@@ -17,7 +27,8 @@ def solution(args):
             else: 
                 rangofinal += str(args[numeroIndex])
 
-        return 'a'
+    return 'a'
+'''
 
 
 if __name__ == '__main__':
