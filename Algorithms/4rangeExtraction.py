@@ -37,3 +37,4 @@ if __name__ == '__main__':
         # = Comparación de índices para actualizar rangoparcial (tiene que haber una diferencia de > 1)
         assert(solution([-3,-2,-1,2,10,15,16,18,19,20])) == '-3--1,2,10,15,16,18-20'
         # Si pasa por cero, la lógica rompe por la resta. (2-1 = 1, aunque no existiesen -1 y 0 haría una serie)
+
