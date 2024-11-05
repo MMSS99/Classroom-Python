@@ -6,9 +6,15 @@ def solution(args):
     partialRange = []
     numberIndex = 0
     absoluteCalculator = 0
+    rangeChecker = []
     while numberIndex < len(args):
         try:
-            absoluteCalculator = abs(abs(args[numberIndex]) - abs(args[numberIndex + 1]))
+            #absoluteCalculator = abs(abs(args[numberIndex]) - abs(args[numberIndex + 1]))
+            #rangeChecker = map(rangeChecker.append, range(args[numberIndex],args[numberIndex + 1]))
+            for i in range(args[numberIndex],args[numberIndex + 1]):
+                rangeChecker.append(i)
+            absoluteCalculator = len(rangeChecker)
+            rangeChecker = []
             if absoluteCalculator < 2 and absoluteCalculator != 0:
                 partialRange.append(args[numberIndex])
             else:
