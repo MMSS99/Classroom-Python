@@ -1,10 +1,37 @@
 #https://www.codewars.com/kata/51ba717bb08c1cd60f00002f/
 
 def solution(args):
-    buscadorRango = []
-    for numeroIndex in range(len(args)):
-        if 
-
+    #Cogemos un número y lo lanzamos contra un array, donde lanzamos el siguiente. Si la resta de sus absolutos es mayor que 1, sacamos el indice anterior y continuamos.
+    finalRange = ''
+    partialRange = []
+    numberIndex = 0
+    absoluteCalculator = 0
+    while numberIndex < len(args):
+        try:
+            absoluteCalculator = abs(abs(args[numberIndex]) - abs(args[numberIndex + 1]))
+            if absoluteCalculator < 2 and absoluteCalculator != 0:
+                partialRange.append(args[numberIndex])
+            else:
+                if len(partialRange) >= 2:
+                    finalRange += str(partialRange[0]) + '-' +str(args[numberIndex]) + ','
+                    partialRange = []
+                elif len(partialRange) == 1:
+                    finalRange += str(partialRange[0]) + ',' +str(args[numberIndex]) + ','
+                    partialRange = []
+                elif len(partialRange) == 0:
+                    finalRange += str(args[numberIndex]) + ','
+            numberIndex += 1
+        except IndexError:
+            if len(partialRange) >= 2:
+                finalRange += str(partialRange[0]) + '-' +str(args[numberIndex]) + ','
+                partialRange = []
+            elif len(partialRange) == 1:
+                finalRange += str(partialRange[0]) + ',' +str(args[numberIndex]) + ','
+                partialRange = []
+            elif len(partialRange) == 0:
+                finalRange += str(args[numberIndex]) + ','
+            return finalRange[:-1]
+             
 
 
 
