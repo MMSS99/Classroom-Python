@@ -1,5 +1,12 @@
 def anagrams(word, words):
+    
+    # comprensión de diccionario
+    return ([anagrama for anagrama in words if ({char:word.count(char) for char in word}) == ({char:anagrama.count(char) for char in anagrama})])
+
+    # comprensión de lista
     return [anagrama for anagrama in words if sorted(anagrama) == sorted(word)]
+
+    # original
     '''
     anagrams = []
     for i in words:
@@ -7,8 +14,9 @@ def anagrams(word, words):
             anagrams.append(i)
     return anagrams
     '''
-    #return [anagrama if sorted(anagrama) == sorted(word) for anagrama in words] # Pide ELSE?
-    #return [anagrama for anagrama in words if sorted(anagrama) == sorted(word)]
+    
+
+
 
 
 
