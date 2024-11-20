@@ -7,9 +7,17 @@
     return arr[::-1]'''
 
 def first_n_smallest(arr, n):
-    print (list(enumerate(arr)))
-    lambda arr, n: while len(arr) > n
-    return [",".join(x for x in )]
+    #arr[::-1].remove(max(arr) for i in range(n))
+    #print ([number for number in arr[::-1] if number in sorted(arr)[:n]][::-1])
+
+    
+    #arr[::-1].remove(max(arr) for i in range(n))
+    #print ([numeroEnumerado[1] for numeroEnumerado in sorted(sorted(enumerate(arr), key=[1])[:n])]) !!! Key= requiere una función de un sólo argumento.
+    #print ((list(enumerate(arr))).sort(key=lambda indice: indice[1]))
+    #print ([numeroEnumerado[1] for numeroEnumerado in sorted((list(enumerate(arr)).sort(key=lambda indice: indice[1]))[:n])])
+
+    #return [number for number in arr[::-1] if number in sorted(arr)[:n]][::-1][:n]
+    return [numeroEnumerado[1] for numeroEnumerado in sorted(sorted(enumerate(arr), key=lambda indice: indice[1])[:n])]
 
 
 
